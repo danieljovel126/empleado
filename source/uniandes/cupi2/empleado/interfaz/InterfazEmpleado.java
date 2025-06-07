@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -21,7 +21,7 @@ import uniandes.cupi2.empleado.mundo.Empleado;
 import uniandes.cupi2.empleado.mundo.Fecha;
 
 /**
- * Ventana principal de la aplicación.
+ * Ventana principal de la aplicaciï¿½n.
  */
 @SuppressWarnings("serial")
 public class InterfazEmpleado extends JFrame
@@ -55,7 +55,7 @@ public class InterfazEmpleado extends JFrame
     private PanelConsultas panelConsultas;
 
     /**
-     * Panel para ejecutar las extensiones a la aplicación.
+     * Panel para ejecutar las extensiones a la aplicaciï¿½n.
      */
     private PanelOpciones panelOpciones;
 
@@ -102,7 +102,7 @@ public class InterfazEmpleado extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
@@ -114,7 +114,7 @@ public class InterfazEmpleado extends JFrame
     }
 
     /**
-     * Calcula la antigüedad del empleado y la muestra.
+     * Calcula la antigï¿½edad del empleado y la muestra.
      */
     public void calcularAntiguedadEmpleado( )
     {
@@ -131,7 +131,7 @@ public class InterfazEmpleado extends JFrame
 
     /**
      * Modifica y actualiza el salario del empleado. <br>
-     * <b>post: </b> Se actualizó el salario del empleado y se presentó la información actualizada.
+     * <b>post: </b> Se actualizï¿½ el salario del empleado y se presentï¿½ la informaciï¿½n actualizada.
      */
     public void modificarSalario( )
     {
@@ -144,7 +144,7 @@ public class InterfazEmpleado extends JFrame
                 double nuevoSalario = Double.parseDouble( strSalario );
                 if( nuevoSalario <= 0 )
                 {
-                    JOptionPane.showMessageDialog( this, "El salario debe ser un número positivo.", "Modificar salario", JOptionPane.ERROR_MESSAGE );
+                    JOptionPane.showMessageDialog( this, "El salario debe ser un nï¿½mero positivo.", "Modificar salario", JOptionPane.ERROR_MESSAGE );
                 }
                 else
                 {
@@ -154,14 +154,14 @@ public class InterfazEmpleado extends JFrame
             }
             catch( NumberFormatException nfe )
             {
-                JOptionPane.showMessageDialog( this, "El salario debe ser un número.", "Modificar salario", JOptionPane.ERROR_MESSAGE );
+                JOptionPane.showMessageDialog( this, "El salario debe ser un nï¿½mero.", "Modificar salario", JOptionPane.ERROR_MESSAGE );
             }
         }
     }
 
     /**
      * Actualiza los datos actuales del empleado. <br>
-     * <b>post: </b> Se actualizaron los campos de la ventana que contienen la información del empleado.
+     * <b>post: </b> Se actualizaron los campos de la ventana que contienen la informaciï¿½n del empleado.
      */
     public void actualizar( )
     {
@@ -198,7 +198,7 @@ public class InterfazEmpleado extends JFrame
      * Cambia los datos del empleado.
      * @param pNombre Nuevo nombre del empleado. pNombre != "" && pNombre != null.
      * @param pApellido Nuevo apellido del empleado. pApellido != "" && pApellido != null.
-     * @param pGenero Nuevo género del empleado. pGenero == 1 && pGenero == 0.
+     * @param pGenero Nuevo gï¿½nero del empleado. pGenero == 1 && pGenero == 0.
      * @param pFechaNacimiento Nueva fecha de nacimiento del empleado. pFechaNacimiento != null.
      * @param pFechaIngreso Nueva fecha de ingreso. pFechaIngreso != null.
      * @param pSalario Nuevo salario del empleado. pSalario > 0.
@@ -212,7 +212,23 @@ public class InterfazEmpleado extends JFrame
     }
 
     /**
-     * Muestra el diálogo para modificar el empleado.
+     * Muestra el nombre completo, la edad y el salario como mensaje.
+     */
+    public void mostrarNombreEdadSalario( )
+    {
+        String nombreCompleto = empleado.darNombre( ) + " " + empleado.darApellido( );
+        int edad = empleado.calcularEdad( );
+        double salario = empleado.darSalario( );
+
+        String mensaje = "Nombre completo: " + nombreCompleto + "\\n" +
+                         "Edad: " + edad + " aÃ±os\\n" +
+                         String.format("Salario: $%,.2f", salario);
+
+        JOptionPane.showMessageDialog( this, mensaje, "Datos del Empleado", JOptionPane.INFORMATION_MESSAGE );
+    }
+
+    /**
+     * Muestra el diï¿½logo para modificar el empleado.
      */
     public void mostrarDialogoCambiarEmpleado( )
     {
@@ -221,11 +237,11 @@ public class InterfazEmpleado extends JFrame
     }
 
     // -----------------------------------------------------------------
-    // Puntos de Extensión
+    // Puntos de Extensiï¿½n
     // -----------------------------------------------------------------
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      */
     public void reqFuncOpcion1( )
     {
@@ -235,7 +251,7 @@ public class InterfazEmpleado extends JFrame
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      */
     public void reqFuncOpcion2( )
     {
@@ -249,8 +265,8 @@ public class InterfazEmpleado extends JFrame
     // -----------------------------------------------------------------
 
     /**
-     * Ejecuta la aplicación.
-     * @param pArgs Parámetros de la ejecución. No son necesarios.
+     * Ejecuta la aplicaciï¿½n.
+     * @param pArgs Parï¿½metros de la ejecuciï¿½n. No son necesarios.
      */
     public static void main( String[] pArgs )
     {
@@ -269,3 +285,4 @@ public class InterfazEmpleado extends JFrame
     }
 
 }
+
