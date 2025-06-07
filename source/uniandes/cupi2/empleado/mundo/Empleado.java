@@ -240,7 +240,17 @@ public class Empleado
      */
     public String metodo1( )
     {
-        return "Respuesta 1";
+    	//calcular si el empleado es mayor o menor de edad 
+    	int edad = calcularEdad();
+        
+    	if(edad >=18)
+    	{
+        	return "El empleado es mayor de edad";
+        }
+    	else
+    	{
+    		return "El empleado es menor de edad";
+    	}
     }
 
     /**
