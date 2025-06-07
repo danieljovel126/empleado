@@ -70,13 +70,13 @@ public class Empleado
      */
     public Empleado( )
     {
-        nombre = "Pedro";
-        apellido = "Matallana";
-        genero = 1;
-        fechaNacimiento = new Fecha( 16, 6, 1982 );
-        fechaIngreso = new Fecha( 5, 4, 2000 );
+        nombre = "Eduard";
+        apellido = "velez";
+        genero = 2;
+        fechaNacimiento = new Fecha( 03, 4, 2005 );
+        fechaIngreso = new Fecha( 5, 4, 2023 );
         imagen = "empleado1.png";
-        salario = 1500000;
+        salario = 1600000;
     }
 
     /**
@@ -240,7 +240,17 @@ public class Empleado
      */
     public String metodo1( )
     {
-        return "Respuesta 1";
+    	//calcular si el empleado es mayor o menor de edad 
+    	int edad = calcularEdad();
+        
+    	if(edad >=18)
+    	{
+        	return "El empleado es mayor de edad";
+        }
+    	else
+    	{
+    		return "El empleado es menor de edad";
+    	}
     }
 
     /**
